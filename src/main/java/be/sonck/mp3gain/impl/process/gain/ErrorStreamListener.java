@@ -1,12 +1,11 @@
 package be.sonck.mp3gain.impl.process.gain;
 
-import java.io.File;
-import java.util.List;
-
-import org.apache.commons.lang3.StringUtils;
-
 import be.sonck.mp3gain.api.service.Mp3GainChangeListener;
 import be.sonck.mp3gain.impl.process.StreamReaderListener;
+import org.apache.commons.lang3.StringUtils;
+
+import java.io.File;
+import java.util.List;
 
 class ErrorStreamListener implements StreamReaderListener {
 
@@ -44,7 +43,7 @@ class ErrorStreamListener implements StreamReaderListener {
 	
 	private void handleTrackStarted(String line) {
 		// sample input line:
-		// Applying gain change of -4 to /Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/îlšf Arnalds/Innundir Skinni/04 Vinkonur.mp3...
+		// Applying gain change of -4 to /Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/Olaf Arnalds/Innundir Skinni/04 Vinkonur.mp3...
 		
 		String filename = line.substring(line.indexOf('/'), line.length() - 3);
 		currentTrack = new File(filename);

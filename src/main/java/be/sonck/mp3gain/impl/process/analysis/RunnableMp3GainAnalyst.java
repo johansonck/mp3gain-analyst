@@ -1,17 +1,17 @@
 package be.sonck.mp3gain.impl.process.analysis;
 
+import be.sonck.mp3gain.api.service.Mp3GainAnalysisListener;
+import be.sonck.mp3gain.impl.process.RunnableStreamReader;
+
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import be.sonck.mp3gain.api.service.Mp3GainAnalysisListener;
-import be.sonck.mp3gain.impl.process.RunnableStreamReader;
+import static be.sonck.mp3gain.impl.process.Constants.MP3GAIN;
 
 public class RunnableMp3GainAnalyst implements Runnable {
-	
-	private static final String MP3GAIN = "/usr/bin/mp3gain";
 	
 	public enum Command {
 		

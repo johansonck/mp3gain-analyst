@@ -1,19 +1,19 @@
 package be.sonck.mp3gain.impl.process.gain;
 
+import be.sonck.mp3gain.api.service.Mp3GainChangeListener;
+import be.sonck.mp3gain.impl.service.Mp3Filter;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import be.sonck.mp3gain.api.service.Mp3GainChangeListener;
-import be.sonck.mp3gain.impl.service.Mp3Filter;
-
 public class MainClass {
 
 	private static final File LOCATION = new File(
 //			"/Users/johansonck/Documents/Johan/Informatica/Ontwikkeling/Java/Projects/mp3gain-analyst/samples/Cerulean/");
-//			"/Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/Red Hot Chili Peppers/Blood Sugar Sex Magik/");
-			"/Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/îlšf Arnalds/Innundir Skinni");
+			"/Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/Red Hot Chili Peppers/Blood Sugar Sex Magik/");
+//			"/Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/Olaf Arnalds/Innundir Skinni");
 //			"/Volumes/Macintosh HD 2/iTunes/iTunes Music/Music/Compilations/Ken Burns - Jazz_ The Story of America's/");
 
 	public static void main(String[] args) throws Exception {

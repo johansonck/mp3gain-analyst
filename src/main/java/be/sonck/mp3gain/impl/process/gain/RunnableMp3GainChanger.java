@@ -1,19 +1,20 @@
 package be.sonck.mp3gain.impl.process.gain;
 
+import be.sonck.mp3gain.api.service.Mp3GainChangeListener;
+import be.sonck.mp3gain.impl.process.Constants;
+import be.sonck.mp3gain.impl.process.DefaultStreamReaderListener;
+import be.sonck.mp3gain.impl.process.RunnableStreamReader;
+import be.sonck.mp3gain.impl.process.StreamReaderListener;
+
 import java.io.File;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-import be.sonck.mp3gain.api.service.Mp3GainChangeListener;
-import be.sonck.mp3gain.impl.process.DefaultStreamReaderListener;
-import be.sonck.mp3gain.impl.process.RunnableStreamReader;
-import be.sonck.mp3gain.impl.process.StreamReaderListener;
-
 public class RunnableMp3GainChanger implements Runnable {
 
-	private static final String[] APPLY_GAIN = new String[] {"/usr/bin/mp3gain", "-g"};
+	private static final String[] APPLY_GAIN = new String[] {Constants.MP3GAIN, "-g"};
 	private final List<File> files;
 	private final Mp3GainChangeListener listener;
 	private final int change;
